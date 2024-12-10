@@ -1,4 +1,4 @@
-package ie.atu.testpackage;
+package ie.atu.iolab;
 
 class HelloWorld
 {
