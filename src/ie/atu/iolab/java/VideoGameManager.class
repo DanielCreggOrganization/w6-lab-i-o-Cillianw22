@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class VideoGameManager {
+    private ArrayList<VideoGame> videoGames;
+
+    public VideoGameManager() {
+        this.videoGames = new ArrayList<>();
+    }
+
+    public void addVideoGame(VideoGame game) {
+        videoGames.add(game);
+    }
+
+    public void removeVideoGame(String title) {
+        videoGames.removeIf(game -> game.getTitle().equalsIgnoreCase(title));
+    }
+
+    public VideoGame searchByTitle(String title) {
+        return videoGames.stream()
+                .filter(game -> game.getTitle().equalsIgnoreCase(title))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public void listAllGames() {
+        videoGames.forEach(System.out::println);
+    }
+}
