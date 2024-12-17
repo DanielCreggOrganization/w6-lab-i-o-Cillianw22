@@ -1,5 +1,5 @@
 package ie.atu.iolab;
 
-public class Main {
+public class GameManager {
     
 }
